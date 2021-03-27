@@ -5,6 +5,11 @@
 </head>
 
 <body>
-    Raymond Reddington
+    <h3>Raymond Reddington</h3>
+    <form action="objid/imageprocess" method="POST">
+        {% csrf_token%}
+        <input id="image" type="file" name="image"/>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
