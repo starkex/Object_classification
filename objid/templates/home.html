@@ -5,7 +5,9 @@
 </head>
 
 <body>
-    <h3>Raymond Reddington</h3>
+    <h2>Image Classification</h2>
+    <h4>Upload your image here...<h4>
+<br>
     <form action="./imageprocess" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <input id="image" type="file" name="image"/>
