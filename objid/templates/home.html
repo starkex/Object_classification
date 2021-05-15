@@ -2,16 +2,53 @@
 <html>
 <head>
     <title>FBI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+
+    <style>
+        .panel{
+            position: relative;
+            margin-top: 15%;
+           
+        }
+
+        @media only screen and (max-width: 360px) {
+
+            body {
+                     background-color: lightblue;
+                }
+        }
+
+    </style>
 </head>
 
 <body>
-    <h2>Image Classification</h2>
-    <h4>Upload your image here...<h4>
-<br>
+
+    <div class="container panel">
+  <div class="card-deck">
+    <div class="card bg-primary">
+      <div class="card-body text-center">
+        <h2>Image Classification</h2>
+    <h6>Upload your image here...<h6>
+        <br>
     <form action="./imageprocess" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <input id="image" type="file" name="image"/>
+        <br>
         <input type="submit" value="Submit">
     </form>
+      </div>
+    </div>
+
+    </div>
+
+    </div>  
+  </div>
+</div>
+    
 </body>
 </html>
