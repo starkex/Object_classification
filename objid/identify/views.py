@@ -28,7 +28,7 @@ def imageprocess(request):
       x= preprocess_input(x)
 
       preds = model.predict(x)
-      print('Predicted:', decode_predictions(preds, top=3)[0])
+      print('Predicted:', decode_predictions(preds, top=1)[0])
 
       html =decode_predictions(preds, top=3)[0]
       res=[]
